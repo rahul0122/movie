@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+
+    {% block body %}
+    <h2 style="color:red;" align="center" >Delete Movies!!!</h2><br>
+    <div class="container p-3 my-3 bg-primary text-white" align="center">
+        <form method="post">
+        {% csrf_token %}
+        Do you want to delete ?
+        <button>Delete</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>
